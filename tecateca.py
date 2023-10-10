@@ -52,3 +52,11 @@ def valor_estoque_produto(produto, quantidade, valor_uni):
     valor_estoque = valor_uni * quantidade
     return valor_estoque
 
+
+def positivo_ou_negativo(num):
+    if num > 0:
+        return "POSITIVO"
+    elif num < 0:
+        return "NEGATIVO"
+    else:
+        return "NEUTRO"
