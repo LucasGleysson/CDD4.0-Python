@@ -1,6 +1,13 @@
-def soma(n1, n2):
-    resultado = n1 + n2
-    print(f'{n1} + {n2} = {resultado}')
+def validador_numero_anti_professor(entrada):
+    ...
+
+
+def soma(*numeros):
+    acumulador = 0
+    for i in numeros:
+        acumulador += i
+    return acumulador
+
 
 
 def subtracao(n1, n2):
@@ -67,10 +74,10 @@ def calc_media(nota1, nota2):
     return media
 
 
-def status_media_aprovacao(nota):
-    if nota >= 7:
-        print("APROVADO")
-    elif nota >= 4:
-        print('EM RECUPERAÇÃO')
+def status_media_aprovacao(media):
+    if media >= 7:
+        print(f'O aluno foi APROVADO com média {media}')
+    elif media >= 4:
+        print(f'O aluno está em RECUPERAÇÃO com média {media}')
     else:
-        print("REPROVADO")
+        print(f"O aluno foi REPROVADO com média {media}")
