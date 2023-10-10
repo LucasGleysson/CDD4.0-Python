@@ -67,7 +67,7 @@ def calc_media(nota1, nota2):
     return media
 
 
-def situacao_nota(nota):
+def status_media_aprovacao(nota):
     if nota >= 7:
         print("APROVADO")
     elif nota >= 4:
