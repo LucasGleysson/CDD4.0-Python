@@ -60,3 +60,17 @@ def positivo_ou_negativo(num):
         return "NEGATIVO"
     else:
         return "NEUTRO"
+
+
+def calc_media(nota1, nota2):
+    media = (nota1 + nota2) / 2
+    return media
+
+
+def situacao_nota(nota):
+    if nota >= 7:
+        print("APROVADO")
+    elif nota >= 4:
+        print('EM RECUPERAÇÃO')
+    else:
+        print("REPROVADO")
