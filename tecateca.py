@@ -9,7 +9,6 @@ def soma(*numeros):
     return acumulador
 
 
-
 def subtracao(n1, n2):
     resultado = n1 - n2
     print(f'{n1} - {n2} = {resultado}')
@@ -26,15 +25,15 @@ def divisao(n1, n2):
 
 
 def piramide_de_numeros(num):
-    for i in range(num+1):
+    for i in range(num + 1):
         ladeira = str(i) * i
         print(ladeira)
 
 
 def ladeira_de_numeros(num):
-    for i in range(num+1):
+    for i in range(num + 1):
         for j in range(i):
-            print(j+1, end=' ')
+            print(j + 1, end=' ')
         print('\n')
 
 
@@ -81,3 +80,24 @@ def status_media_aprovacao(media):
         print(f'O aluno está em RECUPERAÇÃO com média {media}')
     else:
         print(f"O aluno foi REPROVADO com média {media}")
+
+
+def inverte_e_conta_letrass(texto):
+    qnt_letras = 0
+    for letra in texto:
+        if letra not in ' !@#$%"/*+-.,|\(){}[]_^~`´?:><1234567890':
+            qnt_letras = 0
+
+    print(f'O texto tem {qnt_letras}')
+    print(f'TEXTO INVERTIDO: ')
+
+    for i in range(len(texto), 0, -1):
+        print(texto[i - 1], end='')
+
+
+def numero_unicos(*lista_numeros):
+    nova_lista = [0] * len(lista_numeros)
+    for numero in lista_numeros:
+        if numero not in nova_lista:
+            nova_lista.append(numero)
+    return nova_lista
